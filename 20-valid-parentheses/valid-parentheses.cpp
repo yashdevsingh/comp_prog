@@ -1,6 +1,6 @@
 class Solution {
 private:
-    bool isNumBal(string s){
+    /*bool isNumBal(string s){
         int sum=0;
         for(int i=0; i<s.length(); i++){
             if(s[i]=='(') sum += 1; if(s[i]==')') sum -= 1;
@@ -8,7 +8,7 @@ private:
             if(s[i]=='[') sum += 1; if(s[i]==']') sum -= 1;
         }
         return sum==0;
-    }
+    }*/
     bool isOrderCorrect(string s) {
         stack<char> st;
         for(int i = 0; i < s.length(); i++) {
@@ -24,8 +24,7 @@ private:
     }
 public:
     bool isValid(string s) {
-        if(!isNumBal(s)) return false;
-        if(!isOrderCorrect(s)) return false;
-        return true;
+        //if(!isNumBal(s)) return false;
+        return isOrderCorrect(s);
     }
 };
