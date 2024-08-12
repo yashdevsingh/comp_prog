@@ -16,10 +16,9 @@ public:
         }
     }
     int findCircleNum(vector<vector<int>>& isConnected) {
-        int n = isConnected.size();
-        vector<bool> visited(n, false);
+        vector<bool> visited(isConnected.size(), false);
         int c = 0;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < isConnected.size(); i++) {
             if (!visited[i]) {
                 bfs(isConnected, visited, i);
                 c++;
